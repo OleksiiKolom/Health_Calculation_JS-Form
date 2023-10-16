@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Робимо блок виведення результатів невидимим */
+#outputBlockResults {
+    display: none;
+}
+
+/* Робимо блоки списків соматотипів невидимими*/
+#listForEctomorph,
+#listForMesomorph,
+#listForEndomorph {
+    display: none;
+}
+
+/* Видаляємо кнопки перемикання значень */
+.blocksFormInput input[type="number"]::-webkit-inner-spin-button,
+.blocksFormInput input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/*Стилі для блока форми*/
+.blockForm {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #F9F9FF;
+    border-radius: 60px;
+    border: 3px #262F34 groove;
+
+    color: #262F34;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Стилі для блоків введення даних*/
+.blocksFormInput {
+    margin-bottom: 30px;
+}
+
+/* Стилі для блока попередження */
+.outputWarning {
+    margin: 10px 12px 0 20px;
+    display: block;
+
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+
+    color: #CB0000;
+}
+
+.nameLabel {
+    width: 100%;
+    margin: 20px;
+    margin-bottom: 10px;
+    display: block;
+
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.inputNumber {
+    width: 100%;
+    height: 35px;
+
+    background-color: #F1F1F2;
+
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+    text-indent: 30px;
+
+    border: 1px solid #262F34;
+    border-radius: 15px;
+    outline: none;
+}
+
+.inputNumber:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.inputNumber:not(:hover) {
+    transition: transform 0.5s;
+}
+
+.inputNumber:focus {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+
+    border: 2px solid #262F34;
+}
+
+#selectGender input {
+    display: none;
+}
+
+.buttonContainer {
+    width: 100%;
+    height: 40px;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+#selectGender .buttonContainer .button {
+    width: 50%;
+    height: 100%;
+    float: left;
+
+    background-color: #F1F1F2;
+
+    font-size: 1.3em;
+    letter-spacing: 0.3em;
+}
+
+#selectGender .button label  {
+    height: 100%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectGender .button:nth-child(1) label {
+    border-radius: 20px 0 0 20px;
+}
+
+#selectGender .button:nth-child(2) label {
+    border-radius: 0 20px 20px 0;
+}
+
+#selectGender input:checked + label {
+    background-color: #B3DBC0;
+    transition: background-color 0.5s;
+
+    border: 1px solid #262F34;
+    box-sizing: border-box;
+}
+
+#selectGender input:not(:checked) + label:hover {
+    background-color: #B3DBC0;
+    transition: background-color 0.5s;
+
+    color: #F9F9FF;
+}
+
+#selectGender input:not(:checked) + label:not(:hover) { 
+    transition: background-color 0.5s;
+}
+
+#calculateButton {
+    position: relative;
+}
+
+#calculateButton .button {
+    width: 50%;
+    height: 45px;
+    overflow: hidden;
+    cursor: pointer;
+
+    position: relative;
+    left: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 40px;
+    border: 1px solid #262F34;
+    box-sizing: border-box;
+    background-color: #B3DBC0;
+    
+    font-size: 1.3em;
+    letter-spacing: 0.3em;
+}
+
+#calculateButton .button:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+#calculateButton .button:not(:hover) {
+    transition: transform 0.5s;
+}
+
+#calculateButton .button:active {
+    transform: translateY(10px);
+    transition: transform 0.2s ease; 
+}
+
+
+#outputBlockResults {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 30px;
+
+    color: #262F34;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-size: 1.2em;
+    line-height: 1.6em;
+    word-spacing: 0.3em;
+    letter-spacing: 0.06em;
+}
+
+.outputBlocks {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #F9F9FF;
+    
+    border-radius: 40px;
+}
+
+.stringResults {
+    font-weight: 700;
+}
+
+summary {
+    padding: 2px 30px;
+    margin: 30px 3px 20px 3px;
+
+    color: #262F34;
+    background-color: #B3DBC0;
+
+    border: 1px solid #262F34;
+    border-radius: 40px;
+}
+
+.outputBlocks p,
+.outputBlocks h4 {
+    text-indent: 2em;
+}
+
+details li {
+    list-style: inside;
+    padding-left: 40px;
+}
+
+details section {
+    margin-bottom: 30px;
+}
+
+details h4 {
+    margin-bottom: 8px;
+}
+
+#detailsAboutIdealWeight article,
+#detailsAboutIco article {
+    margin-top: 60px;
+}
+
+/* Стилі для таблиць */
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #262F34;
+    padding: 3px 10px;
+}
+
+th {
+    background-color: #B3DBC0;
+}
+
+tr:nth-of-type(odd):nth-child(n+3) {
+    background-color: #F1F1F2;
+}
+
+#tableBMI, #tablePercentFat {
+    width: 80%;
+}
+
+#tableBMI td:first-child,
+#tableBMI th:first-child,
+#tablePercentFat td:nth-child(-n+2),
+#tablePercentFat th:nth-child(-n+2) {
+    text-align: center;
+    white-space: nowrap;
+}
+
+#tableSomatotype th,
+#tableSomatotype td {
+    padding: 0px;
+}
+
+#tableSomatotype img {
+    display: block;
+}
+
+/* Стили для контейнера футера */
+footer {
+    background-color: #262F34;
+    position: relative;
+    width: 100%;
+    
+    color: #F9F9FF;
+    height: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    word-spacing: 0.2em;
+    letter-spacing: 0.04em;
+}
+
+.follow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px 50px 0 0;
+}
+
+.follow h5 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.follow img {
+    height: 30px;
+    margin: 5px;
+}
+
+.madeBy {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+.version {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: normal;
+    margin: 0 0 10px 10px;
+}
